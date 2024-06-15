@@ -4,7 +4,7 @@ option go_package = "/genprotos";
 
 package protos;
 
-import "void.proto";
+import "proto-service/void.proto";
 
 service TagService {
     rpc Create (TagCReqOrCRes) returns (TagCReqOrCRes) {};
