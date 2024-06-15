@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = "/genprotos";
+
+package protos;
+
+import "void.proto";
+
+service TagService {
+    rpc Create (TagCReqOrCRes) returns (TagCReqOrCRes) {};
+    rpc GetByID (TagGReqOrDReq) returns (TagCReqOrCRes) {};
+    rpc Delete (TagGReqOrDReq) returns (Void) {};
+    rpc GetAll (TagGAReq) returns (TagGAResOrPopularRes) {};
+    rpc GetPopular (Pagination) returns (TagGAResOrPopularRes) {};
+};
+
+message TagCReqOrCRes {
+    string tag = 1;
+    string post_id = 2;
+};
+
+message TagGReqOrDReq {
+    string post_id = 1;
+};
+
+message TagGAReq {
+    Filter filter = 1;
+    Pagination pagination = 2;
+};
+
+message Filter {
+    string post_id = 1;
+};
+
+message TagGAResOrPopularRes {
+    repeated TagCReqOrCRes tags = 1;
+};

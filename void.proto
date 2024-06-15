@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "/genprotos";
+
+package protos;
+
+message Void {};
+
+message Pagination {
+    int64 limit = 1;
+    int64 offset = 2;
+};

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "/genprotos";
+
+package protos;
+
+
+service UserService {
+    rpc GetBy (UserGReqOrDReq) returns (UserGRes) {};
+};
+
+message UserGRes {
+    string user_id = 1;
+    string username = 2;
+    string email = 3;
+    string password = 4;
+};
+
+message UserGReqOrDReq {
+    string data = 1;
+    oneof identifier {
+        bool id = 2;
+        bool username = 3;
+        bool email = 4;
+    };
+};
