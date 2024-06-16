@@ -4,7 +4,7 @@ option go_package = "/genprotos";
 
 package protos;
 
-import "proto-service/void.proto";
+import "proto-service/forum-protos/void.proto";
 
 service CategoryService {
     rpc Create (CategoryCReqOrCResOrGResOrUReqOrURes) returns (CategoryCReqOrCResOrGResOrUReqOrURes) {};
