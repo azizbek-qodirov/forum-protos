@@ -24,7 +24,7 @@ message CategoryGReqOrDReq {
 };
 
 message CategoryGAReq {
-    Filter filter = 1;
+    CategoryFilter filter = 1;
     Pagination pagination = 2;
 };
 

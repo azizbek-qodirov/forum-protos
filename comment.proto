@@ -31,7 +31,7 @@ message CommentUReq {
 };
 
 message CommentGAReq {
-    Filter filter = 1;
+    CommentFilter filter = 1;
     Pagination pagination = 2;
 };
 

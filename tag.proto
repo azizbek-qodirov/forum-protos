@@ -24,7 +24,7 @@ message TagGReqOrDReq {
 };
 
 message TagGAReq {
-    Filter filter = 1;
+    TagFilter filter = 1;
     Pagination pagination = 2;
 };
 

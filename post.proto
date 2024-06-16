@@ -36,7 +36,7 @@ message PostUReq {
 };
 
 message PostGAReq {
-    Filter filter = 1;
+    PostFilter filter = 1;
     Pagination pagination = 2;
 };
 
