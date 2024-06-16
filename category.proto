@@ -28,7 +28,7 @@ message CategoryGAReq {
     Pagination pagination = 2;
 };
 
-message Filter {
+message CategoryFilter {
     string category_id = 1;
 };
 

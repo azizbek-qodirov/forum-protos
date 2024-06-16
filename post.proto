@@ -40,7 +40,7 @@ message PostGAReq {
     Pagination pagination = 2;
 };
 
-message Filter {
+message PostFilter {
     string user_id = 1;
     string category_id = 2;
     string title = 3;
