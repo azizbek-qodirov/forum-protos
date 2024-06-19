@@ -23,6 +23,13 @@ message PostCReqOrCResOrGResOrUResp {
     string tags = 6;
 };
 
+message PostCReqForSwagger {
+    string title = 3;
+    string body = 4;
+    string category_id = 5; 
+    string tags = 6;
+};
+
 message PostGReqOrDReq {
     string post_id = 1;
 };

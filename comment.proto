@@ -9,7 +9,6 @@ import "forum-protos/void.proto";
 service CommentService {
     rpc Create (CommentCReqOrCResOrGResOrURes) returns (CommentCReqOrCResOrGResOrURes) {};
     rpc GetByID (CommentGReqOrDReq) returns (CommentCReqOrCResOrGResOrURes) {};
-    // rpc GetByPostID (CommentGReqOrDReqByPostID) returns (CommentGAReq) {};
     rpc Update (CommentUReq) returns (CommentCReqOrCResOrGResOrURes) {};
     rpc Delete (CommentGReqOrDReq) returns (Void) {};
     rpc DeleteByPostID (CommentGReqOrDReqByPostID) returns (Void) {};
@@ -22,6 +21,11 @@ message CommentCReqOrCResOrGResOrURes {
     string post_id = 3;
     string body = 4;
 };
+
+message CommentCReqForSwagger {
+    string post_id = 1;
+    string body = 2;
+}
 
 message CommentGReqOrDReq {
     string comment_id = 1;
