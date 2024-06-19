@@ -9,8 +9,10 @@ import "forum-protos/void.proto";
 service CommentService {
     rpc Create (CommentCReqOrCResOrGResOrURes) returns (CommentCReqOrCResOrGResOrURes) {};
     rpc GetByID (CommentGReqOrDReq) returns (CommentCReqOrCResOrGResOrURes) {};
+    // rpc GetByPostID (CommentGReqOrDReqByPostID) returns (CommentGAReq) {};
     rpc Update (CommentUReq) returns (CommentCReqOrCResOrGResOrURes) {};
     rpc Delete (CommentGReqOrDReq) returns (Void) {};
+    rpc DeleteByPostID (CommentGReqOrDReqByPostID) returns (Void) {};
     rpc GetAll (CommentGAReq) returns (CommentGARes) {};
 };
 
