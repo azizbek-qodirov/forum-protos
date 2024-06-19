@@ -22,6 +22,9 @@ message CommentCReqOrCResOrGResOrURes {
 };
 
 message CommentGReqOrDReq {
+    string comment_id = 1;
+};
+message CommentGReqOrDReqByPostID {
     string post_id = 1;
 };
 
