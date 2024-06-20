@@ -33,3 +33,12 @@ message TagFilter {
 message TagGAResOrPopularRes {
     repeated TagCReqOrCRes tags = 1;
 };
+
+message TagPopular {
+    string tag = 1;
+    int64 count = 2;
+}
+
+message TagPopularRes {
+    repeated TagPopular tags = 1;
+}
