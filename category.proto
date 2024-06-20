@@ -19,6 +19,10 @@ message CategoryCReqOrCResOrGResOrUReqOrURes {
     string name = 2;
 };
 
+message CategoryCReqForSwagger {
+    string name = 1;
+};
+
 message CategoryGReqOrDReq {
     string category_id = 1;
 };

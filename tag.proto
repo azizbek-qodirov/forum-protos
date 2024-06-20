@@ -8,9 +8,7 @@ import "forum-protos/void.proto";
 
 service TagService {
     rpc Create (TagCReqOrCRes) returns (TagCReqOrCRes) {};
-    rpc GetByID (TagGReqOrDReq) returns (TagGAResOrPopularRes) {};
     rpc Delete (TagGReqOrDReq) returns (Void) {};
-    rpc GetAll (TagGAReq) returns (TagGAResOrPopularRes) {};
     rpc GetPopular (Pagination) returns (TagGAResOrPopularRes) {};
 };
 
